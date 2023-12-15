@@ -171,10 +171,88 @@ nav{
     background-color: rgb(20, 20, 232);
 
 }
+
+/*PRODUCT SECTION*/
+
+.product{
+    display: grid;
+    grid-template-columns: repeat(3,400px);
+    place-items: center;
+    user-select: none;
+}
+.smart-phone-info{
+    width: 450px;
+    padding: 1rem;
+    margin: 20px 10px;
+    box-shadow: 1px 2px 2px black -2px -2px -2px red;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.phone-img{
+    width: 300px;
+
+}
+.phone-img img{
+    width: 100%;
+}
+.brand-name h3{
+    margin-top: -20px;
+    font-size: 1.8rem;
+}
+.phone-specs p{
+  padding-right: 1.5rem;
+  font-size: 1.3rem;
+  color: rgb(129, 127, 127);
+  margin: 10px 0 0 0;
+}
+.phone-specs a{
+    color: black;
+}
+.phone-specs a:hover{
+    color: rgb(188, 139, 49);
+}
+.offer_and_price{
+    display: flex;
+    align-items: center;
+    margin: 10px 0 0 0;
+}
+.offer p{
+    font-size: 1.8rem;
+    color: green;    
+    margin-right: 10px;
+}
+.price p{
+    font-size: 1.3rem;
+}
+.price p span{
+    text-decoration: line-through;
+    color: rgb(129, 127, 127);
+}
+.delivery_details{
+    font-size: 1.1rem;
+    color: rgb(129, 127, 127);
+    margin: 10px 0 0 0;
+}
+.buybtn button{
+    margin: 10px 0 0 0;
+    width: 150px;
+    height: 50px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    background-color: yellow;
+    border-radius: 30px;
+    cursor: pointer;
+    user-select: auto;
+}
+.buybtn button:hover{
+    background-color: rgb(177, 177, 60);
+    color: white;
+}
+
+
+
+
 @media screen and (max-width:1000px) {
-    .container{
-        position: relative;
-    }
     nav{
         justify-content: space-between;
     }
@@ -216,8 +294,8 @@ nav{
     
     }
     .showlink{
-        display: block;
-     transition: all 2s ease;
+         display: block;
+        transition: all 2s ease;
 
     }
 /*HOME SECTION*/
@@ -233,12 +311,13 @@ nav{
     }
     .image-slider{
         position: relative;
-
     }
     .arrow{
         font-size: 1.5rem;
         height: 0;
-        top: 65%;
+        top: 25%;
+        color: blue;
+
     }
     .right-arrow{ right: -7px;}
     .left-arrow{ left: -8px;}
@@ -259,6 +338,10 @@ nav{
        background-color: rgb(20, 20, 232);
    
    }
+   .product{
+    grid-template-columns: 1fr;
+    
+   }
    
 }
 
@@ -272,3 +355,9 @@ nav{
    }
     
 } 
+@media screen and (min-width:1000px) {
+    .product{
+        grid-template-columns: repeat(2,1fr);
+    
+       }
+}
